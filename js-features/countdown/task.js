@@ -16,8 +16,13 @@ function decreaseTimer() {
 
     if(secondsOfTimer === 0) {
         clearInterval(idInterval);
+        let link = document.getElementById("download-link");
+        link.click();
         alert("Вы победили в конкурсе!");
     }
+
+
+   // window.location.href = "https://example.com"
 
 }
 
