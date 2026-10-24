@@ -1,4 +1,5 @@
 let secondsOfTimer = 59;
+let timer = document.getElementById("timer");
 
 function decreaseTimer() {
     secondsOfTimer--;
@@ -7,14 +8,17 @@ function decreaseTimer() {
     let minutes = Math.floor(secondsOfTimer / 60) % 60;
     let seconds = secondsOfTimer % 60;
 
-    hours = toString(hours).padStart(2, "0");
-    minutes = toString(minutes).padStart(2, "0");
-    seconds = toString(seconds).padStart(2, "0");
+    hours = hours.toString().padStart(2, "0");
+    minutes = minutes.toString().padStart(2, "0");
+    seconds = seconds.toString().padStart(2, "0");
+
+    timer.textContent = `${hours}:${minutes}:${seconds}`;
 
     if(secondsOfTimer === 0) {
         clearInterval(idInterval);
         alert("Вы победили в конкурсе!");
     }
+
 }
 
 let idInterval = setInterval(decreaseTimer, 1000);
