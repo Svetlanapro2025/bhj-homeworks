@@ -7,6 +7,10 @@ body {
   align-items: center;
 }
 
+.cart-hidden {
+  display: none;
+}
+
 .cart__product {
   position: relative;
 }
@@ -26,6 +30,14 @@ body {
   height: 100px;
   object-fit: contain;
 }
+
+.delete {
+  color: red;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .product {
   display: flex;
   flex-wrap: wrap;
